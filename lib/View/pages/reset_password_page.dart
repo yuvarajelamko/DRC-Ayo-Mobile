@@ -23,6 +23,11 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   bool _isConfirmPasswordVisible = false;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   void dispose() {
     super.dispose();
     _oldPasswordController.dispose();
