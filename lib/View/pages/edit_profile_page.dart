@@ -1,9 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pushable_button/pushable_button.dart';
 
-class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({Key? key});
+class EditProfilePage extends StatefulWidget {
+  final String token;
+  const EditProfilePage({required this.token, Key? key}) : super(key: key);
+
+  @override
+  State<EditProfilePage> createState() => _EditProfilePageState();
+}
+
+class _EditProfilePageState extends State<EditProfilePage> {
+  String? token;
+  String? email;
+  final _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    print('hi' + '$widget');
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,5 +103,5 @@ class EditProfilePage extends StatelessWidget {
       ),
     );
   }
-  
+
 }
